@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Expense Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-wrapper">
+        <header class="app-header">
+            <div class="logo-area">
+                <div class="logo-icon">💸</div>
+                <h1>Expense Tracker</h1>
+            </div>
+            <p>Monitor your daily spending cleanly.</p>
+        </header>
+
+        <section class="dashboard-metrics">
+            <div class="total-spent-card">
+                <h3>Total Amount Spent</h3>
+                <h1 id="total-display">$0.00</h1>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <form id="expense-form" class="finance-form">
+                <div class="form-row">
+                    <input type="text" id="extitle" placeholder="Expense Name (e.g., Groceries)" required maxlength="255" autocomplete="off">
+                </div>
+                <div class="form-row split-row">
+                    <input type="number" id="examount" placeholder="Amount ($)" step="0.01" min="0.01" required>
+                    <input type="date" id="exdate" required>
+                </div>
+                <button type="submit" class="submit-btn">Recorded Expense</button>
+            </form>
+        </section>
+
+        <section class="log-section">
+            <h3>Recent Transactions</h3>
+            <ul id="expense-list" class="transactions-list">
+                <li class="empty-state">Loading financial logs...</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
